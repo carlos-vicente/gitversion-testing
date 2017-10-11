@@ -7,7 +7,6 @@ branches:
         tag: 'unstable'
     releases?[/-]:
         mode: ContinuousDelivery
-        increment: None
         tag: ''
 ignore:
   sha: []
