@@ -10,7 +10,7 @@ Task("Default")
     });
 
     if(AppVeyor.IsRunningOnAppVeyor){
-        AppVeyor.UpdateBuildVersion(version.NuGetVersionV2);
+        AppVeyor.UpdateBuildVersion(version.FullSemVer);
     }
 });
 
