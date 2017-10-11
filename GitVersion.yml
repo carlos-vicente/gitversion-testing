@@ -3,6 +3,8 @@ build-metadata-padding: 5
 tag-prefix: '[Rr]eleases?[/-]'
 assembly-informational-format: '{AssemblySemVer}'
 branches:
+    master:
+        tag: 'unstable'
     releases?[/-]:
         mode: ContinuousDelivery
         increment: None
