@@ -5,9 +5,13 @@ var target = Argument("target", "Default");
 Task("Default")
   .Does(() =>
 {
-  GitVersion(new GitVersionSettings {
+    var version = GitVersion(new GitVersionSettings {
         UpdateAssemblyInfo = true
     });
+
+    if(AppVeyor.IsRunningOnAppVeyor){
+        AppVeyor.UpdateBuildVersion(version.NuGetVersionV2);
+    }
 });
 
 RunTarget(target);
